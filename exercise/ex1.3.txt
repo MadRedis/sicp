@@ -1,0 +1,10 @@
+(define (square x) (* x x))
+(define (largesttwo x y)
+  (cond ((> x y) x)
+    (else y)))
+(define (largestthree x y z)
+  (cond ((> (largesttwo x y) z) largesttwo x y)
+    (else z)))
+(define (square-sum x y z) (+ (square (largesttwo x y)) (square (largestthree x y z))))
+
+(square-sum 3 4 5)

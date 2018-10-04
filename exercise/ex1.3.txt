@@ -6,3 +6,12 @@
   (cond ((> (largest x y) (largest y z)) (+ (square (largest x y)) (square (largest y z))))
         ((< (largest x y) (largest y z)) (+ (square (largest x y)) (square (largest y z))))
         ((= (largest x y) (largest y z)) (+ (square (largest x y)) (square (largest x z))))))
+
+//var2
+(define (square x) (* x x)) 
+(define (sumsquares x y) (+ (square x) (square y))) 
+(define (square23 x y z) 
+  (cond  
+    ((and (>= x z) (>= y z)) (sumsquares x y)) 
+    ((and (>= y x) (>= z x)) (sumsquares y z)) 
+    ((and (>= x y) (>= z y)) (sumsquares x z)))) 
